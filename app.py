@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-#from apparel_detection import getPrediction
+from apparel_detection import getPrediction
 import base64
 from werkzeug.utils import secure_filename
 import sys
@@ -22,7 +22,7 @@ def predict_route():
     file_path = os.path.join(
         basepath, 'uploads', secure_filename(f.filename))
     f.save(file_path)
-    return('I changed something')
+    return('I changed dfs')
 
 
 def decodeImage(imgstring, fileName):
