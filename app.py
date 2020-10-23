@@ -24,9 +24,9 @@ def predict_route():
         basepath, 'uploads', secure_filename(f.filename))
     f.save(file_path)
     print(file_path)
-    apparel=getPrediction(file_path)
-    print(apparel)
-    return(apparel)
+#     apparel=getPrediction(file_path)
+#     print(apparel)
+    return('something to print')
 
 
 
