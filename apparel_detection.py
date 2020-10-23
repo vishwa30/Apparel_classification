@@ -6,10 +6,10 @@ from keras.preprocessing import image
 from keras.models import load_model
 import os
 import tensorflow as tf
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-from tensorflow.python.util import deprecation
-deprecation._PRINT_DEPRECATION_WARNINGS = False
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+#from tensorflow.python.util import deprecation
+#deprecation._PRINT_DEPRECATION_WARNINGS = False
+#tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 import cv2
 
 
