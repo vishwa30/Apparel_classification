@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from apparel_detection import getPrediction
+#from apparel_detection import getPrediction
 import base64
 from werkzeug.utils import secure_filename
 import sys
