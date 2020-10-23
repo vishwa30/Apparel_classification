@@ -22,7 +22,7 @@ def predict_route():
     file_path = os.path.join(
         basepath, 'uploads', secure_filename(f.filename))
     f.save(file_path)
-    return('Print good morning')
+    return(file_path)
 
 
 def decodeImage(imgstring, fileName):
