@@ -23,7 +23,6 @@ def predict_route():
     file_path = os.path.join(
         basepath, 'uploads', secure_filename(f.filename))
     f.save(file_path)
-    print(file_path)
 #     apparel=getPrediction(file_path)
 #     print(apparel)
     return('something to print')
