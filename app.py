@@ -1,43 +1,13 @@
 from flask import Flask, request, jsonify, render_template
-#from apparel_detection import get_dict 
+from apparel_detection_without_cv import getPrediction
 import base64
 from werkzeug.utils import secure_filename
 import sys
 import os
 ##In krish cotton static folder is also needed.
 
-import numpy as np
-from itertools import chain
-from keras.applications.vgg16 import preprocess_input
-from keras.preprocessing import image
-from keras.models import load_model
-import os
-import tensorflow as tf
-import cv2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app=Flask(__name__)
+
 
 @app.route('/')
 def func():
@@ -53,19 +23,22 @@ def predict_route():
     file_path = os.path.join(
         basepath, 'uploads', secure_filename(f.filename))
     f.save(file_path)
-    return('I changed again')
+    print(file_path)
+
+    apparel=getPrediction(file_path)
+    print(apparel)
+    return(apparel)
 
 
-def decodeImage(imgstring, fileName):
-    imgdata = base64.b64decode(imgstring)
-    with open(fileName, 'wb') as f:
-        f.write(imgdata)
-        f.close()
-
+# def decodeImage(imgstring, fileName):
+#     imgdata = base64.b64decode(imgstring)
+#     with open(fileName, 'wb') as f:
+#         f.write(imgdata)
+#         f.close()
+#
 
 
 
 if __name__=='__main__':
     app.run(debug=True)
-
-
+    print('something')
