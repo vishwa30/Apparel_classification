@@ -1,10 +1,41 @@
 from flask import Flask, request, jsonify, render_template
-from apparel_detection import get_dict 
+#from apparel_detection import get_dict 
 import base64
 from werkzeug.utils import secure_filename
 import sys
 import os
 ##In krish cotton static folder is also needed.
+
+import numpy as np
+from itertools import chain
+from keras.applications.vgg16 import preprocess_input
+from keras.preprocessing import image
+from keras.models import load_model
+import os
+import tensorflow as tf
+import cv2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app=Flask(__name__)
 
