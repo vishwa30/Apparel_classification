@@ -53,7 +53,7 @@ def predict_route():
     file_path = os.path.join(
         basepath, 'uploads', secure_filename(f.filename))
     f.save(file_path)
-    return('I changed dfs')
+    return('I changed again')
 
 
 def decodeImage(imgstring, fileName):
